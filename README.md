@@ -1,5 +1,6 @@
-Battery Analysis and Issue Detection: 
-README
+Battery Analysis and Issue Detection
+
+
 Overview
 This script performs battery analysis and issue detection for a set of stations, evaluating 
 their performance based on various key metrics. The key performance indicators (KPIs) 
