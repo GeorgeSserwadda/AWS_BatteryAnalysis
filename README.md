@@ -14,6 +14,7 @@ including the detected issues, is saved in a CSV file for each station.
 Key Performance Indicators (KPIs)
 
 Battery Performance Index (BPI)
+
 The Battery Performance Index (BPI) is a combined measure used to assess the overall 
 performance of a station's battery. It is calculated by averaging five different metrics:
 - Mode-Mean Difference (MMD): The absolute difference between the mode and the mean of 
@@ -31,6 +32,7 @@ The higher the BPI, the more likely it is that there are performance issues with
 battery.
 
 Environment Effect on Battery (EEB)
+
 The Environment Effect on Battery (EEB) measures how environmental factors (such as 
 temperature, solar radiation, and precipitation) correlate with battery performance. It is 
 calculated by taking the absolute values of correlations between battery voltage and 
@@ -42,6 +44,7 @@ A higher EEB indicates a stronger environmental influence on battery performance
 could point to external factors impacting the battery's functionality.
 
 Issue Detection
+
 The Detected Issue is determined based on a combination of the BPI and EEB. The rules for 
 issue detection are as follows:
 High Battery Performance Index (BPI):
@@ -63,13 +66,17 @@ No Detected Issue:
 - If none of the above conditions apply, the Detected Issue is set to 'None'.
 
 Script Usage
+
+
 Input Parameters
+
 Stations: A list of station identifiers to analyze (e.g., ['TA00001', 'TA00002', 'TA00003']).
 Variables: The weather variables to include in the analysis (e.g., ['lb', 'te', 'lt', 'ra', 'pr', 'ld']).
 Start Date: The start date of the analysis period (e.g., '2024-10-28').
 End Date: The end date of the analysis period (e.g., '2024-11-12').
 
 Output
+
 The script generates the following outputs
 1. Station Battery Summary: A CSV file containing the calculated metrics for each station, 
 including the Battery Performance Index, Environment Effect on Battery, and Detected 
@@ -79,20 +86,24 @@ retrieved.
 3. Timeseries Data: A CSV file for each station containing the raw timeseries data.
 
 Running the Script
+
 To run the script, ensure that you have the necessary dependencies installed (e.g., TAHMO, 
 pandas, numpy). Then, execute the script in your Python environment.
 
 Real-Time Issue Detection
+
 For real-time issue detection, it is recommended to run the script over a period of 2 weeks, 
 including the current date. This ensures timely detection of recent performance issues, 
 allowing for prompt interventions.
 
 Long-Term Network Audits
+
 For general network audits, run the script for a minimum of 4 months to assess station 
 performance over a more extended period. This allows for identifying trends and issues that 
 may develop over time.
 
 Summary
+
 This script provides an automated method for detecting battery-related issues at remote 
 stations based on performance metrics and environmental correlations. The Battery 
 Performance Index (BPI) and Environment Effect on Battery (EEB) are the two key metrics 
