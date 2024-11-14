@@ -121,8 +121,9 @@ Battery Analysis and Issue Detection Process
 
 Data Collection
 
-Collect measurements for each station.
-Data range: Use the last two weeks for real-time detection; at least four months for a network audit.
+Collect measurements for each station
+
+Data range: Use the last two weeks (5min data) for real-time detection; at least four months (5 min data) for a network audit.
 Data Processing
 
 Clean data by removing rows with missing values in key columns (lb and te).
@@ -132,13 +133,21 @@ KPI Calculation
 Battery Performance Index (BPI): Average of mmd, std, mad, cv, and iqr.
 BPI > 10 indicates potential issues.
 
-Environment Effect on Battery (EEB): Average of absolute values of correlations (lb vs. environmental variables).
-EEB < 10% suggests low environmental impact.
+Environment Effect on Battery (EEB): 
+Average of absolute values of correlations (lb vs. environmental variables)
+
+EEB < 10% suggests low environmental impact
+
 Issue Detection Logic
 
-If BPI > 10 and ((BPI-EEB)/BPI)*100 > 70%: Marked as "Power Issue (Site Visit Needed)".
-If BPI > 10 and EEB ≥ 10%: Marked as "Old Batteries (Replacement Needed)".
+If BPI > 10 and ((BPI-EEB)/BPI)*100 > 70%: Marked as "Power Issue (Site Visit Needed)"
+
+If BPI > 10 and EEB ≥ 10%: Marked as "Old Batteries (Replacement Needed)"
+
 If BPI is None and EEB is None:
-If mode > 50: Marked as "No Issue".
-If mode ≤ 50: Marked as "Hardware Issue".
+
+If mode > 50: Marked as "No Issue"
+
+If mode ≤ 50: Marked as "Hardware Issue"
+
 If 0 < BPI < 10 and EEB > 10%: Marked as "Unstable Old Batteries (Replacement Recommended)".
