@@ -51,7 +51,7 @@ The Detected Issue is determined based on a combination of the BPI and EEB. The 
 issue detection are as follows:
 High Battery Performance Index (BPI):
 - If the BPI is greater than 10, the station is flagged for issues:
- - Power Issue: Detected if the EEB is less than 10%, indicating an internal battery issue. A 
+ - Power Issue: Detected if the percentage of battery failure that are not impacted by EEB is greater than 70%, indicating an internal battery issue. A 
 site visit is recommended.
  - Old Batteries: Detected if the EEB is greater than or equal to 10%, indicating aging 
 batteries that need replacement.
@@ -136,7 +136,7 @@ Environment Effect on Battery (EEB): Average of absolute values of correlations 
 EEB < 10% suggests low environmental impact.
 Issue Detection Logic
 
-If BPI > 10 and EEB < 10%: Marked as "Power Issue (Site Visit Needed)".
+If BPI > 10 and ((BPI-EEB)/BPI)*100 > 70%: Marked as "Power Issue (Site Visit Needed)".
 If BPI > 10 and EEB ≥ 10%: Marked as "Old Batteries (Replacement Needed)".
 If BPI is None and EEB is None:
 If mode > 50: Marked as "No Issue".
