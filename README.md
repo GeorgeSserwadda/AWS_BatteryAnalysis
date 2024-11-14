@@ -1,3 +1,5 @@
+Analysis and Issue Detection
+
 Using Weather parameters and Battery performance of rechargeable batteries in Automatic Weather Station (AWS) to detect station performance issues or problem
 Battery Analysis and Issue Detection
 
@@ -13,7 +15,7 @@ in identifying potential issues related to battery performance. The result of th
 including the detected issues, is saved in a CSV file for each station.
 Key Performance Indicators (KPIs)
 
-Battery Performance Index (BPI)
+Battery Performance Index (BPI) - battery failure rate
 
 The Battery Performance Index (BPI) is a combined measure used to assess the overall 
 performance of a station's battery. It is calculated by averaging five different metrics:
