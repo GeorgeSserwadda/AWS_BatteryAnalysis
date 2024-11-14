@@ -1,15 +1,13 @@
 Analysis and Issue Detection
 
-Using Weather parameters and Battery performance of rechargeable batteries in Automatic Weather Station (AWS) to detect station performance issues or problem
-Battery Analysis and Issue Detection
-
-
 This script performs battery analysis and issue detection for a set of stations, evaluating 
 their performance based on various key metrics. 
-The key performance indicators (KPIs) 
-used for issue detection are:
-1. Battery Performance Index (BPI)
+
+The key performance indicators (KPIs) used for issue detection are:
+
+1. Battery Performance Index (BPI) - battery failure rate
 2. Environment Effect on Battery (EEB)
+
 These KPIs are calculated based on time-series data for the stations, and the analysis helps 
 in identifying potential issues related to battery performance. The result of the analysis, 
 including the detected issues, is saved in a CSV file for each station.
