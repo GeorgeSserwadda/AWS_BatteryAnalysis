@@ -11,7 +11,7 @@ The key performance indicators (KPIs) used for issue detection are:
 These KPIs are calculated based on time-series data for the stations, and the analysis helps 
 in identifying potential issues related to battery performance. The result of the analysis, 
 including the detected issues, is saved in a CSV file for each station.
-Key Performance Indicators (KPIs)
+
 
 Battery Performance Index (BPI) - battery failure rate
 
